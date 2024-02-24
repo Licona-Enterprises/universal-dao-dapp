@@ -1,0 +1,39 @@
+
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form [formGroup]="form" (ngSubmit)="wrapLyx()">
+        <div class="form-group">
+          <label for="inputField">Wrap LYX : </label>
+          <input type="text" class="form-control" id="anotherInput" formControlName="amount" placeholder="Enter value">
+        </div>
+        <div class="form-group">
+          <label for="displayInput">Receive wLWYX </label>
+        <input type="text" class="form-control" id="displayInput" [value]="form.get('amount')?.value" disabled>
+        </div>
+        <button type="submit" class="btn btn-primary">submit txn </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container2">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form [formGroup]="unwrapForm" (ngSubmit)="unWrapLyx3()">
+          <div class="form-group">
+            <label for="inputField">unwrap wLYX : </label>
+            <input type="text" class="form-control" id="anotherInput" formControlName="amount" placeholder="Enter value">
+          </div>
+          <div class="form-group">
+            <label for="displayInput">Receive LYX </label>
+          <input type="text" class="form-control" id="displayInput" [value]="unwrapForm.get('amount')?.value" disabled>
+          </div>
+          <button type="submit" class="btn btn-primary">submit txn </button>
+        </form>
+      </div>
+    </div>
+  </div>

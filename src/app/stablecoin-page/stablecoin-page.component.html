@@ -1,0 +1,30 @@
+<div style="display: flex; justify-content: flex-start; height: 100vh;flex-direction: column; background: linear-gradient(to bottom, #dee6fd, #010c35);">
+    
+    
+    <div class="description">
+        <div >
+            <p style="text-align: center;">Introducing Universal Dollar, the stablecoin native to the Lukso ecosystem! Built on the innovative LSP7 standard, Universal Dollar offers stability, security, and seamless interoperability within the Lukso blockchain. </p>
+        </div>
+    </div>
+    
+    <div class="formContainer">
+        <form [formGroup]="depositForm" (ngSubmit)="depositLyx()" style="margin-top: 10px;">
+            <div class="form-group textInput">
+                <label for="amount">Sell LYX:</label>
+                <input formControlName="amount" id="amount" class="form-control" type="text" step="0.01" min="0" required>
+            </div>
+            <div class="form-group textInput">
+                <button type="submit" class="btn btn-primary" (click)="checkLyxMarketPrice()">Check Market Rates</button>
+            </div>
+            <div class="form-group textInput">
+                <label for="result">Receive USD: </label>
+                    <input type="text" class="form-control" id="displayInput" [value]="depositValue?.toString() || ''" disabled>
+            </div>
+            <div class="form-group textInput">
+                
+                <!-- <button type="submit" class="btn btn-primary">Buy Governance Token</button> -->
+            </div>
+        </form>
+    </div>
+
+</div>

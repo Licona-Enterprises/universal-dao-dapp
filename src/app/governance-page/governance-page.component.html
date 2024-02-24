@@ -1,0 +1,30 @@
+<div style="display: flex; justify-content: flex-start; height: 100vh;flex-direction: column; background: linear-gradient(to bottom, #dee6fd, #010c35);">
+    
+    
+    <div class="description">
+        <div >
+            <p style="text-align: center;">By contributing LYX to our governance contract, users actively participate in securing the network and are aptly rewarded with our governance token, ensuring their stake in shaping the future direction of our ecosystem.</p>
+            <p style="text-align: center;">This empowers users to actively engage in governance decisions while being incentivized for their contributions to Lukso's security and decentralization.</p>
+        </div>
+    </div>
+    
+    <div class="formContainer">
+        <form [formGroup]="depositForm" (ngSubmit)="depositLyx()" style="margin-top: 10px;">
+            <div class="form-group textInput">
+                <label for="amount">Deposit LYX:</label>
+                <input formControlName="amount" id="amount" class="form-control" type="text" step="0.01" min="0" required>
+            </div>
+            <div class="form-group textInput">
+                <label for="result">Receive:</label>
+                <input type="text" class="form-control" id="displayInput" [value]="depositForm.value.amount * 4" disabled>
+            </div>
+            <div class="form-group textInput">
+                <button type="submit" class="btn btn-primary">Buy Governance Token</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+
+

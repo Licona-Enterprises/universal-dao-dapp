@@ -1,0 +1,11 @@
+.description {
+    height: 10%;
+    margin: 40px;
+}
+.formContainer {
+    display: flex;
+    justify-content: center;
+}
+.textInput {
+    margin: 20px;
+}

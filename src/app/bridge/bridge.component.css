@@ -1,0 +1,16 @@
+.description {
+    height: 20%;
+    margin: 40px;
+}
+.formContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown {
+    margin: 20px;
+}
+
+.textInput {
+    margin: 20px;
+}
